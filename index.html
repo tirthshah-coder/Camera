@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay style="transform: scale(1);"></video>
+    </div>
+
+    <button id="record">
+        <div></div>
+    </button>
+    <button id="capture">
+        <div></div>
+    </button>
+
+    <div class="filter-container">
+        <div class="filters" style="background-color: #778aeb50;" ></div>
+        <div class="filters" style="background-color: #e6676759;"></div>
+        <div class="filters" style="background-color: #ffb04248;"></div>
+        <div class="filters" style="background-color: #ff9ff265;"></div>
+        <div class="filters" style="background-color: #48dafb4b;"></div>
+        <div class="filters"></div>   <!-- Normal one -->
+    </div>
+
+    <div class="zoom-container">
+        <div class="zoomIn">+</div>
+        <div class="zoomOut">-</div>
+    </div>
+
+    <img src="image-gallery.png" id="gallery"/>
+    
+
+    <script src="js/dbScript.js"></script> <!-- It is written first bcoz we use this fn in script directly -->
+    <script src="js/script.js"></script>
+</body>
+</html>

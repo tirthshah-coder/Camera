@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.video-container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #000;
+}
+
+video {    
+    height: 100%;   /* Apni parent ki means video-container ke barabar*/
+    width: 100%;
+}
+
+#record, #capture{
+    position: fixed;
+    z-index: 2;
+    right: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    cursor: pointer;
+    background-color: #000;
+}
+
+#record{
+    top: 40vh;
+}
+
+#capture{
+    top: 50vh;
+}
+
+#record div, #capture div{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#record div{
+    background-color: red;
+}
+
+#capture div{
+    background-color: white;
+}
+
+.capture-animation{
+    animation: inOut 0.5s;
+}
+
+.record-animation{
+    animation: inOut 1s infinite;
+}
+
+@keyframes inOut {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.filter-container{
+    z-index: 2;
+    height: 25rem;
+    width: 5rem;
+    position: fixed;
+    left: 2rem;
+    top: calc((100vh - 25rem) / 2);   /* to get in middle */
+    background-color: red;
+}
+
+.filters{
+    border: 2px solid white;
+    width: 100%;
+    height: calc(25rem / 6);  /*  6 div ko equal height assign */
+    background: url(../filter.jpg);
+    background-size: cover;
+    background-blend-mode: soft-light;   /* image and bg-color both visible */
+}
+
+.zoom-container{
+    height: 8rem;
+    width: 5rem;
+    position: fixed;
+    right: 2rem;
+    top: 8rem;
+    z-index: 2;
+}
+
+.zoom-container div{
+    width: 100%;
+    height: 50%;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2f3640;
+}
+
+/* Used in JS */
+.filter-div{
+    position: fixed;
+    top: 0;
+    width:100vw;
+    height: 100vh;
+}
+
+#gallery {
+    position: fixed;
+    z-index: 3;
+    right: 2rem;
+    height: 5rem;
+    width: 5rem;
+    bottom: 8rem;
+    cursor: pointer;
+}
